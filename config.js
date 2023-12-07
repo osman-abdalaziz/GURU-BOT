@@ -61,7 +61,7 @@ global.fgsc = 'https://github.com/osman-abdalaziz/GURU-BOT'
 global.fgyt = ''
 global.fgpyp = ''
 global.fglog = 'https://i.ibb.co/RpDMgWt/guru.jpg' 
-global.thumb = fs.readFileSync('https://i.ibb.co/RpDMgWt/guru.jpg')
+global.thumb = fs.readFileSync('./Assets/Gurulogo.jpg')
 
 
 global.wait = '*▰▰▰▱▱▱▱▱*'
