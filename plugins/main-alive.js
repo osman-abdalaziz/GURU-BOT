@@ -29,8 +29,8 @@ let handler = async(m, { conn, text, usedPrefix, command }) => {
           renderLargerThumbnail: true
           }}
       };
-    
-      await conn.sendMessage(m.chat, doc, { quoted: con });
+         // m.chat, doc, { quoted: con }
+      await conn.sendMessage("Yes I am Alive ^_^");
     
     }
     
