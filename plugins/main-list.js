@@ -30,18 +30,14 @@ break;
           𝘽𝙊𝙏 𝙈𝙀𝙉𝙐  
    ╰───•••──┄ °❀     
    ┏━━━ʕ•㉨•ʔ━━━┓
-   ⎪⌲👑 _${usedPrefix}gita_
    ⎪⌲👑 _${usedPrefix}ping_
    ⎪⌲👑 _${usedPrefix}uptime_
    ⎪⌲👑 _${usedPrefix}bot_
-   ⎪⌲👑 _${usedPrefix}owner_
    ⎪⌲👑 _${usedPrefix}runtime_
    ⎪⌲👑 _${usedPrefix}infobot_
    ⎪⌲👑 _${usedPrefix}donate_
    ⎪⌲👑 _${usedPrefix}groups_
    ⎪⌲👑 _${usedPrefix}blocklist_
-   ⎪⌲👑 _${usedPrefix}listprem_
-   ⎪⌲👑    Guru
    ┗━━━ʕ•㉨•ʔ━━━┛`; // Your bot menu message here
           break;
         case 'ownermenu':
