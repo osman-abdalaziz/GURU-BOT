@@ -46,8 +46,12 @@ let quranSurahHandler = async (m, { conn }) => {
 
     m.reply(quranSurah);
 
-    if (json.data.recitation.full) {
-      conn.sendFile(m.chat, json.data.recitation.full, 'recitation.mp3', null, m, true, { type: 'audioMessage', ptt: true });
+    if (json.data.ayahCount < 50) {
+      if (json.data.recitation.full) {
+        conn.sendFile(m.chat, json.data.recitation.full, 'recitation.mp3', null, m, true, { type: 'audioMessage', ptt: true });
+      }
+    } else {
+      m.reply("I cannot send large audio files \n *Note:* Dr.Osman was the one who placed the restriction, not me! 🙄")
     }
   } catch (error) {
     console.error(error);
