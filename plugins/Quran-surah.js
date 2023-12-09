@@ -40,8 +40,8 @@ let quranSurahHandler = async (m, { conn }) => {
 
     let quranSurah = `
 🕌 *القرآن الكريم*\n
-📜 *سورة: ${json.data.asma.ar}*\n
-النوع: ${json.data.type.en}\n
+📜 *سورة: ${json.data.asma.ar.short}*\n
+النوع: ${json.data.type.ar}\n
 عدد الآيات: ${json.data.ayahCount}\n`;
 
     m.reply(quranSurah);
