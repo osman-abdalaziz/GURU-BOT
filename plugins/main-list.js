@@ -35,7 +35,6 @@ break;
    ⎪⌲👑 _${usedPrefix}uptime_
    ⎪⌲👑 _${usedPrefix}bot_
    ⎪⌲👑 _${usedPrefix}owner_
-   ⎪⌲👑 _${usedPrefix}script_
    ⎪⌲👑 _${usedPrefix}runtime_
    ⎪⌲👑 _${usedPrefix}infobot_
    ⎪⌲👑 _${usedPrefix}donate_
@@ -121,12 +120,9 @@ break;
     ⎪⌲👑 _${usedPrefix}truth_
     ⎪⌲👑 _${usedPrefix}dare_
     ⎪⌲👑 _${usedPrefix}flirt_
-    ⎪⌲👑 _${usedPrefix}gay_
     ⎪⌲👑 _${usedPrefix}shayeri_
     ⎪⌲👑 _${usedPrefix}ship_
     ⎪⌲👑 _${usedPrefix}waste_
-    ⎪⌲👑 _${usedPrefix}simpcard_
-    ⎪⌲👑 _${usedPrefix}hornycard_
     ⎪⌲👑 _${usedPrefix}ytcomment_
     ⎪⌲👑 _${usedPrefix}stupid_
     ⎪⌲👑 _${usedPrefix}lolicon_
@@ -142,9 +138,7 @@ break;
     ⎪⌲👑 _${usedPrefix}math_
     ⎪⌲👑 _${usedPrefix}math answer_
     ⎪⌲👑 _${usedPrefix}ppt_
-    ⎪⌲👑 _${usedPrefix}slot_
     ⎪⌲👑 _${usedPrefix}casino_
-    ⎪⌲👑 _${usedPrefix}yourmom_
     ⎪⌲👑 _${usedPrefix}teri mummy_
     ┗━━━ʕ•㉨•ʔ━━━┛`; // 
           break;
@@ -186,13 +180,10 @@ break;
      ⎪⌲👑 _${usedPrefix}translate_
      ⎪⌲👑 _${usedPrefix}tourl_
      ⎪⌲👑 _${usedPrefix}wikipedia_
-     ⎪⌲👑 _${usedPrefix}nowa_
      ⎪⌲👑 _${usedPrefix}qrmaker_
      ⎪⌲👑 _${usedPrefix}readqr_
      ⎪⌲👑 _${usedPrefix}fancy_
      ⎪⌲👑 _${usedPrefix}weather_
-     ⎪⌲👑 _${usedPrefix}siri_
-     ⎪⌲👑 _${usedPrefix}alexa_
      ⎪⌲👑 _${usedPrefix}dalle_
      ⎪⌲👑 _${usedPrefix}tocartoon_
      ⎪⌲👑 _${usedPrefix}quote_
@@ -215,7 +206,7 @@ break;
     
       conn.sendFile(m.chat, pp, 'https://i.ibb.co/RpDMgWt/guru.jpg', lkr, m, false, { mentions: [who] });
     
-      let done = '👍';
+      let done = '📃';
       m.react(done);
     };
     
