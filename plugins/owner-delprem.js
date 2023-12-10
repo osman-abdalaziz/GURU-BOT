@@ -17,6 +17,6 @@ handler.tags = ['owner']
 handler.command = ['delprem', 'delpremium'] 
 
 handler.group = true
-handler.rowner = true
+handler.owner = true
 
 export default handler
