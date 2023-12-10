@@ -9,15 +9,17 @@ let who
 if (global.prems.includes(who.split`@`[0])) throw '✳️ The user Mentioned Already is premium'
 global.prems.push(`${who.split`@`[0]}`)
 
-conn.reply(m.chat, `
-✅ PREMIUM
+conn.react(✅);
+let lkr = `✅ PREMIUM | @${who.split`@`[0]} now you become a premium user 🥳`;
+conn.sendFile(m.chat, './Assets/congrads.gif', 'https://i.ibb.co/RpDMgWt/guru.jpg', lkr, m, false, { mentions: [who] });
+    
+// conn.reply(m.chat, `
+// ✅ PREMIUM
 
-@${who.split`@`[0]} now you become a premium user
-┌───────────
-▢ *Number:* ${user.name}
-└───────────
-`, m, { mentions: [who] })
+// @${who.split`@`[0]} now you become a premium user
+// `, m, { mentions: [who] })
 
+    
 }
 handler.help = ['addprem <@tag>']
 handler.tags = ['owner']
