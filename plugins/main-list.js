@@ -28,7 +28,7 @@ break;
         case 'botmenu':
                   pp = './Assets/Bot.jpg';
           lkr = `
-┏━━━━━❬ 🤖 BOT Menu ❭━━━━━┓
+┏━━━❬ 🤖 BOT Menu ❭━━━┓
 ❖ _${usedPrefix}ping_
 ❖ _${usedPrefix}uptime_
 ❖ _${usedPrefix}bot_
@@ -37,12 +37,12 @@ break;
 ❖ _${usedPrefix}donate_
 ❖ _${usedPrefix}groups_
 ❖ _${usedPrefix}blocklist_
-┗━━━━━❬ 🤖 BOT Menu ❭━━━━━┛`; // Your bot menu message here
+┗━━━❬ 🤖 BOT Menu ❭━━━┛`; // Your bot menu message here
           break;
         case 'ownermenu':
           pp = './Assets/Owner.jpg';
           lkr = `
-┏━━━━━❬ 👑 Owner Menu ❭━━━━━┓
+┏━━━❬ 👑 Owner Menu ❭━━━┓
 ❖ _${usedPrefix}banchat_
 ❖ _${usedPrefix}unbanchat_
 ❖ _${usedPrefix}banuser_
@@ -55,12 +55,12 @@ break;
 ❖ _${usedPrefix}resetprefix_
 ❖ _${usedPrefix}getfile_
 ❖ _${usedPrefix}getplugin_
-┗━━━━━❬ 👑 Owner Menu ❭━━━━━┛`; // 
+┗━━━❬ 👑 Owner Menu ❭━━━┛`; // 
           break;
           case 'groupmenu':
           pp = './Assets/Group.jpg';
           lkr = `
-┏━━━━━❬ 🧑‍🤝‍🧑 Group Menu ❭━━━━━┓
+┏━━━❬ 🧑‍🤝‍🧑 Group Menu ❭━━━┓
 ❖ _${usedPrefix}kick *<@tag>*_
 ❖ _${usedPrefix}promote *<@tag>*_
 ❖ _${usedPrefix}demote *<@tag>*_
@@ -77,13 +77,13 @@ break;
 ❖ _${usedPrefix}unwarn *<@tag>*_
 ❖ _${usedPrefix}group *<open/close>*_
 ❖ _${usedPrefix}enable
-┗━━━━━❬ 🧑‍🤝‍🧑 Group Menu ❭━━━━━┛`; // 
+┗━━━❬ 🧑‍🤝‍🧑 Group Menu ❭━━━┛`; // 
           break;
           case 'downloadermenu':
             case 'dlmenu' :
                   pp = './Assets/Download.jpg';
           lkr = `
-┏━━━━━❬ 📥 Downloader Menu ❭━━━━━┓
+┏━━━❬ 📥 Downloader Menu ❭━━━┓
 ❖_${usedPrefix}play_
 ❖_${usedPrefix}song_
 ❖ _${usedPrefix}yta <link>_
@@ -101,12 +101,12 @@ break;
 ❖ _${usedPrefix}instagram <link>_
 ❖ _${usedPrefix}spotify_
 ❖ _${usedPrefix}facebook <link>_
-┗━━━━━❬ 📥 Downloader Menu ❭━━━━━┛`; // 
+┗━━━❬ 📥 Downloader Menu ❭━━━┛`; // 
           break;
           case 'funmenu':
                   pp = './Assets/Fun.jpg';
           lkr = `
-┏━━━━━❬ 🎉 Fun Menu ❭━━━━━┓
+┏━━━❬ 🎉 Fun Menu ❭━━━┓
 ❖ _${usedPrefix}character_
 ❖ _${usedPrefix}truth_
 ❖ _${usedPrefix}dare_
@@ -117,12 +117,12 @@ break;
 ❖ _${usedPrefix}ytcomment_
 ❖ _${usedPrefix}stupid_
 ❖ _${usedPrefix}lolicon_
-┗━━━━━❬ 🎉 Fun Menu ❭━━━━━┛`; // 
+┗━━━❬ 🎉 Fun Menu ❭━━━┛`; // 
           break;
           case 'gamemenu':
                   pp = './Assets/Games.jpg';
           lkr = `
-┏━━━━━❬ 🎮 Games Menu ❭━━━━━┓   
+┏━━━❬ 🎮 Games Menu ❭━━━┓   
 ❖ _${usedPrefix}tictactoe_
 ❖ _${usedPrefix}delttt_
 ❖ _${usedPrefix}math_
@@ -131,12 +131,12 @@ break;
 ❖ _${usedPrefix}casino_
 ❖ _${usedPrefix}teri mummy_
 ❖ _${usedPrefix}chess <Help | Create | Start | Join>_
-┗━━━━━❬ 🎮 Games Menu ❭━━━━━┛`; // 
+┗━━━❬ 🎮 Games Menu ❭━━━┛`; // 
           break;
           case 'stickermenu':
                   pp = './Assets/Sticker.jpg';
           lkr = `
-┏━━━━━❬ 🎨 Sticker Menu ❭━━━━━┓
+┏━━━❬ 🎨 Sticker Menu ❭━━━┓
 ❖ _${usedPrefix}sticker_
 ❖ _${usedPrefix}take_
 ❖ _${usedPrefix}scircle_
@@ -151,12 +151,12 @@ break;
 ❖ _${usedPrefix}attp_
 ❖ _${usedPrefix}attp2_
 ❖ _${usedPrefix}attp3_
-┗━━━━━❬ 🎨 Sticker Menu ❭━━━━━┛`; 
+┗━━━❬ 🎨 Sticker Menu ❭━━━┛`; 
           break;
           case 'toolmenu':
                   pp = './Assets/Tools.jpg';
           lkr = `
-┏━━━━━❬ 🧰 Tools Menu ❭━━━━━┓
+┏━━━❬ 🧰 Tools Menu ❭━━━┓
 ❖ _${usedPrefix}autosticker_
 ❖ _${usedPrefix}pdf_
 ❖ _${usedPrefix}whatmusic_
@@ -184,7 +184,7 @@ break;
 ❖ _${usedPrefix}tinyurl/shorturl_
 ❖ _${usedPrefix}readvo_
 ❖ _${usedPrefix}true_
-┗━━━━━❬ 🧰 Tools Menu ❭━━━━━┛`; // 
+┗━━━❬ 🧰 Tools Menu ❭━━━┛`; // 
           break;
           case 'logomenu':
                   pp = './Assets/Logo.jpg';
