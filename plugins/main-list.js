@@ -26,17 +26,18 @@ break;
         
 
         case 'botmenu':
-          lkr = `*❬ BOT Menu ❭*
-   ┏━━━━━*OSBot*━━━━━┓
-   ✦ _${usedPrefix}ping_
-   ✦ _${usedPrefix}uptime_
-   ✦ _${usedPrefix}bot_
-   ✦ _${usedPrefix}runtime_
-   ✦ _${usedPrefix}infobot_
-   ✦ _${usedPrefix}donate_
-   ✦ _${usedPrefix}groups_
-   ✦ _${usedPrefix}blocklist_
-   ┗━━━━━*OSBot*━━━━━┛`; // Your bot menu message here
+                  pp = './Assets/Bot.jpg';
+          lkr = `
+┏━━━━━❬ BOT Menu ❭━━━━━┓
+➽ _${usedPrefix}ping_
+➽ _${usedPrefix}uptime_
+➽ _${usedPrefix}bot_
+➽ _${usedPrefix}runtime_
+➽ _${usedPrefix}infobot_
+➽ _${usedPrefix}donate_
+➽ _${usedPrefix}groups_
+➽ _${usedPrefix}blocklist_
+┗━━━━━❬ BOT Menu ❭━━━━━┛`; // Your bot menu message here
           break;
         case 'ownermenu':
           lkr = `❀° ┄──•••───╮
