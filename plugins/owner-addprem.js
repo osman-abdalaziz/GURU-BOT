@@ -23,8 +23,8 @@ conn.sendFile(m.chat, './Assets/congrads.gif', 'https://i.ibb.co/RpDMgWt/guru.jp
 }
 handler.help = ['addprem <@tag>']
 handler.tags = ['owner']
-handler.command = ['addprem', 'addpremium'] 
-
+// handler.command = ['addprem', 'addpremium'] 
+handler.command = /^(add|give|-)(prem|premium)$/i;
 handler.group = true
 handler.owner = true
 
