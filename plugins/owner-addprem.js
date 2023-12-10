@@ -51,7 +51,7 @@ let handler = async (m, { conn, text }) => {
 handler.help = ['addprem @user']
 handler.tags = ['owner']
 handler.command = /^(add|give|-)(prem|premium)$/i;
-handler.owner = true
+handler.rowner = true
 handler.group = true
 
 export default handler;
