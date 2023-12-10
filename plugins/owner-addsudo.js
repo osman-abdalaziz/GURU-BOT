@@ -10,7 +10,6 @@ let handler = async (m, { conn, text }) => {
     if (global.owner.includes(who.split('@')[0])) throw 'This person is already an owner!';
     global.owner.push([who.split('@')[0], name, true]);
     const caption = `🌟SUDO | Now @${who.split('@')[0]} has been made an Owner! 🥳🥳`;
-    await conn.react(🥳);
     await conn.sendFile(m.chat, './Assets/giphy.gif', 'https://i.ibb.co/RpDMgWt/guru.jpg', caption, m, false, { mentions: [who] });
 }
 handler.help = ['addowner @user']
