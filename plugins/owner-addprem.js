@@ -41,7 +41,7 @@ let handler = async (m, { conn, text }) => {
     let name = await conn.getName(m.quoted.sender)
     if (!who) throw 'Tag the person you want to make an Premium!';
     if (global.prems.includes(who.split('@')[0])) throw '✳️ The user Mentioned Already is premium!';
-    global.prems.push([who.split('@')[0], name, true]);
+    global.prems.push(`${who.split`@`[0]}`);
     const caption = `✅ PREMIUM | @${who.split`@`[0]} now you become a premium user 🥳`;
     // await conn.reply(m.chat, caption, m, {
     //     mentions: conn.parseMention(caption)
