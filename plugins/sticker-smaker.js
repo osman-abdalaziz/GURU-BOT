@@ -29,6 +29,7 @@ conn.sendFile(m.chat, stiker, null, { asSticker: true }, m)
 } catch (e) {
 m.reply('Conversion to sticker error, send as image instead')
 await conn.sendFile(m.chat, apiUrl, 'smaker.png', null, m)
+  conn.reply("اي خدمة يباشا")
 }}
 handler.help = ['smaker']
 handler.tags = ['sticker']
