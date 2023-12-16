@@ -10,12 +10,12 @@
     "DATABASE_URL": {
       "description": "your mongodb database url",
       "required": false,
-      "value": ""
+      "value": "mongodb+srv://osman:12341234oss@cluster0.va8itk7.mongodb.net/?retryWrites=true&w=majority"
     },
     "SESSION_ID": {
       "description": "your session id",
       "required": true,
-      "value": ""
+      "value": "Guru_7a7352b6-1071-4d14-ab52-b72abe47a28a"
     },
     "MODE": {
       "description": "mode public or private",
