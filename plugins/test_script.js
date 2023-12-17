@@ -5,8 +5,8 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     m.react("🧑‍💻");
 };
 
-handler.help = ["Script"];
-handler.tags = ["Script"];
-handler.command = /^(Script)$/i;
+handler.help = ["Osman"];
+handler.tags = ["Osman"];
+handler.command = /^(Osman)$/i;
 
 export default handler;
