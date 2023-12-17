@@ -1,11 +1,11 @@
-let handler = async (m, { conn, usedPrefix, command }) => {
-    conn.react('🤗');
-  await conn.relpy(m.chat, "Hello, this is an experimental script that will be developed by Dr.Osman later !", m);
+let handler = async(m, { conn, text, usedPrefix, command }) => {
+    m.reply("Hello, this is an experimental script that will be developed by Dr.Osman later !");
+    m.react("🤗")
 };
 
 
-handler.help = ['Hi'];
-handler.tags = ['Welcome', 'Hello', 'Hi'];
-handler.command = ['Hi', 'Hello'];
+handler.help = ['Hi','Hello'];
+handler.tags = ['Hi'];
+handler.command = /^(Hi|Hello)$/i;
 
 export default handler;
