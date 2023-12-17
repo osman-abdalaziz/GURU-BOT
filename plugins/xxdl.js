@@ -1,18 +1,11 @@
-
-import { xnxxSearch, xnxxdl } from '../lib/scraper.js';
-
-
-
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
-    m.react('🚫');
-  m.relpy("This Command Is Disabled By Dr.Osman");
+    m.react('🤗');
+  m.relpy("Hello, this is an experimental script that will be developed by Dr.Osman later !");
 };
 
-handler.help = ['xnxx'];
-handler.tags = ['nsfw', 'premium'];
-handler.command = ['xnxxsearch', 'xnxxdl', 'xnxx'];
-handler.group = true;
-handler.premium = false;
-handler.register = true;
+
+handler.help = ['Hi'];
+handler.tags = ['Welcome', 'Hello', 'Hi'];
+handler.command = ['Hi', 'Hello'];
 
 export default handler;
