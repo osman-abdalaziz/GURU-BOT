@@ -1,6 +1,6 @@
-let handler = async (m, { conn, args, text, usedPrefix, command }) => {
-    m.react('🤗');
-  m.relpy("Hello, this is an experimental script that will be developed by Dr.Osman later !");
+let handler = async (m, { conn, usedPrefix, command }) => {
+    conn.react('🤗');
+  await conn.relpy(m.chat, "Hello, this is an experimental script that will be developed by Dr.Osman later !", m);
 };
 
 
