@@ -33,11 +33,11 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
                     },
                 },
             },
+            mentions: [who],
         },
-        { mentions: [who] },
         {}
     );
-    m.react("🔏");
+    m.react("🧑‍💻");
 };
 
 handler.help = ["Osman"];
