@@ -6,7 +6,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     // m.reply(
     //     "Hello, this is an experimental script that will be developed by Dr.Osman later !"
     // );
-
+    let who;
     let name = conn.getName(m.sender);
     // Format the repository information with emojis
     const formattedInfo = `
