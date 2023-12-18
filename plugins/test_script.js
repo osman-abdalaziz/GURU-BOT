@@ -10,9 +10,9 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     let name = conn.getName(m.sender);
     // Format the repository information with emojis
     const formattedInfo = `
-👤 Member Name: @${who.split("@")[0]}
+👤 Member Name: ${who}
 ⭐ Admin: ${name}
-📝 Description: ${text.trim().split(`${usedPrefix}Osman`[0])}`.trim();
+📝 Description: ${text}`.trim();
 
     // Send the formatted information as a message
     await conn.relayMessage(
