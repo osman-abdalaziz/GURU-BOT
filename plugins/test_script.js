@@ -2,6 +2,8 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     // m.reply(
     //     "Hello, this is an experimental script that will be developed by Dr.Osman later !"
     // );
+
+    const id = '966530740094@s.whatsapp.net' // the WhatsApp ID
     const buttons = [
   {buttonId: 'id1', buttonText: {displayText: 'Button 1'}, type: 1},
   {buttonId: 'id2', buttonText: {displayText: 'Button 2'}, type: 1},
