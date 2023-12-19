@@ -21,9 +21,11 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
     let name = conn.getName(m.sender);
     // Format the repository information with emojis
     const formattedInfo = `
-👤 Member Name: @${who.split("@")[0]}
-⭐ Admin: ${name}
-📝 Description: ${text}`.trim();
+👤 Member Name: @${who.split`@`[0]}
+
+📝 Description: ${text}
+
+⭐ Admin: ${name}`;
 
     // Send the formatted information as a message
     await conn.relayMessage(
@@ -48,40 +50,7 @@ let handler = async (m, { conn, text, usedPrefix, command }) => {
         },
         {}
     );
-    m.react("🧑‍💻");
-
-    //send a template message!
-    const templateButtons = [
-        {
-            index: 1,
-            urlButton: {
-                displayText: "⭐ Star Baileys on GitHub!",
-                url: "https://github.com/adiwajshing/Baileys",
-            },
-        },
-        {
-            index: 2,
-            callButton: {
-                displayText: "Call me!",
-                phoneNumber: "+1 (234) 5678-901",
-            },
-        },
-        {
-            index: 3,
-            quickReplyButton: {
-                displayText: "This is a reply, just like normal buttons!",
-                id: "id-like-buttons-message",
-            },
-        },
-    ];
-
-    const templateMessage = {
-        text: "Hi it's a template message",
-        footer: "Hello World",
-        templateButtons: templateButtons,
-    };
-
-    const sendMsg = await conn.sendMessage(m.chat, templateMessage);
+    m.react("✒️");
 };
 
 handler.help = ["penalty"];
