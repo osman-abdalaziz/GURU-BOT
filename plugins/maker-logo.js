@@ -19,13 +19,13 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
             conn.sendMessage(
                 m.chat,
                 {
-                    image: { url: data.image },
+                    image: { url: data },
                     caption: `✅ Done this is your logo`,
                 },
                 { quoted: m }
             )
         )
-        .catch((err) => console.log(err));
+        .catch((err) => m.reply(err));
     m.react("✅");
     // switch (type) {
     //     case "sliced":
