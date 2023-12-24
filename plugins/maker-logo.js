@@ -54,7 +54,7 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
         "natural",
         "shadow",
     ];
-    if (args) {
+    if (args.length > 1) {
         let type = args[0].toLowerCase();
         let logoText = args[1].replace("_", " ");
 
