@@ -1,10 +1,10 @@
-import { textpro } from 'mumaker';
+import * as mumaker from 'mumaker';
 let handler = async (m, { conn, text, usedPrefix, command }) => {
     // m.reply(
     //     "Hello, this is an experimental script that will be developed by Dr.Osman later !"
     // );
     m.react("✅");
-    let res = await textpro(
+    let res = await mumaker.textpro(
             "https://textpro.me/create-light-glow-sliced-text-effect-online-1068.html",
             ["osman"]
         )
