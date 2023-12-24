@@ -3,35 +3,34 @@ const make = require("mumaker");
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
     m.react("🕛");
 
-    let type = args[0].toLowerCase();
+    // let type = args[0].toLowerCase();
     let logoText = args[1];
     if (!text) {
         conn.reply(
             `🌟 This is an explanation of how to use \n ${usedPrefix}(mlogo or makelogo) (Type) (Your Text) \n\n Example: \n ${usedPrefix}mlogo thunder Dr.Osman \n\n To get a list of logo types use ${usedPrefix}(mlogo or makelogo) list`
         );
         m.react("❎");
-    } else {
-        switch (type) {
-            case "sliced":
-                make.textpro(
-                    "https://textpro.me/create-light-glow-sliced-text-effect-online-1068.html",
-                    [`${logoText}`]
-                )
-                    .then((data) =>
-                        conn.sendMessage(
-                            m.chat,
-                            {
-                                image: { url: data.image },
-                                caption: `✅ Done this is your logo`,
-                            },
-                            { quoted: m }
-                        )
-                    )
-                    .catch((err) => console.log(err));
-                m.react("✅");
-                break;
-        }
     }
+    make.textpro(
+        "https://textpro.me/create-light-glow-sliced-text-effect-online-1068.html",
+        [`${logoText}`]
+    )
+        .then((data) =>
+            conn.sendMessage(
+                m.chat,
+                {
+                    image: { url: data.image },
+                    caption: `✅ Done this is your logo`,
+                },
+                { quoted: m }
+            )
+        )
+        .catch((err) => console.log(err));
+    m.react("✅");
+    // switch (type) {
+    //     case "sliced":
+    //         break;
+    // }
 };
 
 handler.help = ["mlogo", "makelogo"];
