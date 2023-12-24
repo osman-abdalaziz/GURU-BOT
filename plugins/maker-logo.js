@@ -6,7 +6,7 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
 
     if (text.toLowerCase() == "list") {
         m.reply(`
-*Logo Type List*:
+*Logo Types List*:
 
 » sliced
 » batman
@@ -27,7 +27,8 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
 » natural
 » shadow`);
         m.react("📃");
-    } else if (!text) {
+    }
+    if (!text) {
         m.reply(
             `🌟 This explains how to use the command \n\n ${usedPrefix}makelogo (type) (Your_Text) \n\n Example: ${usedPrefix}makelogo batman Osman_Abdalaziz \n\n ❗*Use "_" to separate words*`
         );
