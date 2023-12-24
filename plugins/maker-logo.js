@@ -1,45 +1,32 @@
-const make = require("mumaker");
+import * as mumaker from "mumaker";
+let handler = async (m, { conn, text, args, usedPrefix, command }) => {
+    // m.reply(
+    //     "Hello, this is an experimental script that will be developed by Dr.Osman later !"
+    // );
 
-let handler = async (m, { conn, args, text, usedPrefix, command }) => {
-    // m.react("🕛");
-
-    // // let type = args[0].toLowerCase();
-    // let logoText = args[1];
-    // if (!text) {
-    //     conn.reply(
-    //         `🌟 This is an explanation of how to use \n ${usedPrefix}(mlogo or makelogo) (Type) (Your Text) \n\n Example: \n ${usedPrefix}mlogo thunder Dr.Osman \n\n To get a list of logo types use ${usedPrefix}(mlogo or makelogo) list`
-    //     );
-    //     m.react("❎");
-    // }
-    make.textpro(
-        "https://textpro.me/create-light-glow-sliced-text-effect-online-1068.html",
-        ["osman"]
-    )
+    let logoText = args[0];
+    m.react("🕛");
+    let res = await mumaker
+        .textpro(
+            "https://textpro.me/create-light-glow-sliced-text-effect-online-1068.html",
+            [`${logoText}`]
+        )
         .then((data) =>
-            conn.sendMessage(
-                m.chat,
-                {
-                    image: { url: data },
-                    caption: `✅ Done this is your logo`,
-                },
-                { quoted: m }
-            )
+            conn.sendMessage(m.chat, {
+                image: { url: `${data.image}` },
+                caption:
+                    "✅ Done there is your logo \n\n Developed By ```Dr.Osman```",
+            })
         )
         .catch((err) => m.reply(err));
     m.react("✅");
-    // switch (type) {
-    //     case "sliced":
-    //         break;
-    // }
 };
 
-handler.help = ["mlogo"];
-handler.tags = ["mlogo"];
-handler.command = /^(mlogo)$/i;
-// handler.diamond = false;
+handler.help = ["makelogo"];
+handler.tags = ["makelogo"];
+handler.command = /^(makelogo)$/i;
 
 export default handler;
-
 /* 
 
 https://textpro.me/create-light-glow-sliced-text-effect-online-1068.html
