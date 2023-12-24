@@ -1,110 +1,100 @@
+const make = require("mumaker");
+
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
-	let tee = `✳️ Enter a short text\n\n📌 Example  : *${usedPrefix + command}* GURU`
-	let too = `✳️ Separate the text with a *+* \n\n📌 Example : \n*${usedPrefix + command}* GURU *+* BOT`
-	
-	m.react(rwait);
-	
-	let type = command.toLowerCase();
-	
-	switch (type) {
-	  case 'gfx1':
-		if (!text) throw tee;
-		let chut = `https://api.caliph.biz.id/api/kaneki?nama=${encodeURIComponent(text)}&apikey=caliphkey`;
-		conn.sendFile(m.chat, chut, 'logo.png', `✅ Result`, m);
-		m.react(done);
-		break;
-		
-	  case 'gfx2': 
-		if (!text) throw too;
-		if (!text.includes('+')) throw too;
-		let [a, b] = text.split('+');
-		let loda = `https://api.caliph.biz.id/api/girlneko?nama=${encodeURIComponent(a.trim())}&nama2=${encodeURIComponent(b.trim())}&apikey=caliphkey`;
-		conn.sendFile(m.chat, loda, 'logo.png', `✅ Result`, m);
-		
-		m.react(done);
-		break;
-		
-	  case 'gfx3':
-		if (!text) throw tee;
-		let cp = `https://api.caliph.biz.id/api/rem?nama=${encodeURIComponent(text.trim())}&apikey=caliphkey`;
-		conn.sendFile(m.chat, cp, 'logo.png', `✅ Result`, m);
-		m.react(done);
-		break;
-		
-	  case 'gfx4': 
-		if (!text) throw tee;
-		let gandu = `https://api.caliph.biz.id/api/textpro/matrix?text=${encodeURIComponent(text)}&apikey=caliphkey`;
-		conn.sendFile(m.chat, gandu, 'logo.png', `✅ Result`, m);
-		m.react(done);
-		break;
-		case 'gfx5':
-    if (!text) throw tee
-    const apiUrll = `https://api.lolhuman.xyz/api/textprome/jokerlogo?apikey=${lolkeysapi}&text=${encodeURIComponent(text)}`;
-    conn.sendFile(m.chat, apiUrll, 'logo.png', '✅ Result', m);
-    m.react('✅');
-    break;
+    m.react("🕛");
 
-	case 'gfx6': 
-	if (!text) throw too
-	if (!text.includes('+')) throw too  
-	let [c, d] = text.split`+`   
-	const apiUrl = `https://api.lolhuman.xyz/api/textprome2/lionlogo?apikey=${lolkeysapi}&text1=${encodeURIComponent(c)}&text2=${encodeURIComponent(d)}`
-	conn.sendFile(m.chat, apiUrl, 'logo.png', `✅ Result`, m)
-	m.react(done)
-	break 
-	case 'gfx7': 
-	if (!text) throw too;
-	if (!text.includes('+')) throw too;
-	let [e, f] = text.split('+');
-	let oda = `https://api.lolhuman.xyz/api/photooxy2/battlefield4?apikey=${lolkeysapi}&text1=${encodeURIComponent(e.trim())}&text2=${encodeURIComponent(f.trim())}`;
-	conn.sendFile(m.chat, oda, 'logo.png', `✅ Result`, m);
-	
-	m.react(done);
-	break 
-	case 'gfx8': 
-	if (!text) throw tee;
-	let rand = `https://api.lolhuman.xyz/api/ephoto1/anonymhacker?apikey=${lolkeysapi}&text=${encodeURIComponent(text)}`;
-	conn.sendFile(m.chat, rand, 'logo.png', `✅ Result`, m);
-	m.react(done);
-	break;
-	case 'gfx9': 
-	if (!text) throw tee;
-	let randi = `https://api.lolhuman.xyz/api/ephoto1/avatarlolnew?apikey=${lolkeysapi}&text=${encodeURIComponent(text)}`;
-	conn.sendFile(m.chat, randi, 'logo.png', `✅ Result`, m);
-	m.react(done);
-	break;
-	case 'gfx10': 
-	if (!text) throw tee;
-	let randu = `https://api.lolhuman.xyz/api/ephoto1/avatardota?apikey=${lolkeysapi}&text=${encodeURIComponent(text)}`;
-	conn.sendFile(m.chat, randu, 'logo.png', `✅ Result`, m);
-	m.react(done);
-	break;
-	case 'gfx11': 
-	if (!text) throw too;
-	if (!text.includes('+')) throw too;
-	let [g, h] = text.split('+');
-	let od = `https://api.lolhuman.xyz/api/ephoto2/codwarzone?apikey=${lolkeysapi}&text1=${encodeURIComponent(g.trim())}&text2=${encodeURIComponent(h.trim())}`;
-	conn.sendFile(m.chat, od, 'logo.png', `✅ Result`, m);
-	
-	m.react(done);
-	break 
-	case 'gfx12': 
-	if (!text) throw tee;
-	let rr = `https://api.lolhuman.xyz/api/ephoto1/freefire?apikey=${lolkeysapi}&text=${encodeURIComponent(text)}`;
-	conn.sendFile(m.chat, rr, 'logo.png', `✅ Result`, m);
-	m.react(done);
-	break;
+    let type = args[0].toLowerCase();
+    let logoText = args[1];
+    if (!text) {
+        conn.reply(
+            `🌟 This is an explanation of how to use \n ${usedPrefix}(mlogo or makelogo) (Type) (Your Text) \n\n Example: \n ${usedPrefix}mlogo thunder Dr.Osman \n\n To get a list of logo types use ${usedPrefix}(mlogo or makelogo) list`
+        );
+        m.react("❎");
+    } else {
+        switch (type) {
+            case "sliced":
+                make.textpro(
+                    "https://textpro.me/create-light-glow-sliced-text-effect-online-1068.html",
+                    [`${logoText}`]
+                )
+                    .then((data) =>
+                        conn.sendMessage(
+                            m.chat,
+                            {
+                                image: { url: data.image },
+                                caption: `✅ Done this is your logo`,
+                            },
+                            { quoted: m }
+                        )
+                    )
+                    .catch((err) => console.log(err));
+                m.react("✅");
+                break;
+        }
+    }
+};
 
-	  default:
-	} 
-  };
-  
-  handler.help = ['gfx1', 'gfx2', 'gfx3', 'gfx4', 'gfx5', 'gfx6', 'gfx7', 'gfx8', 'gfx9', 'gfx10', 'gfx11', 'gfx12'];
-  handler.tags = ['maker'];
-  handler.command = /^(gfx1|gfx2|gfx3|gfx4|gfx5|gfx6|gfx7|gfx8|gfx9|gfx10|gfx11|gfx12)$/i;
-  handler.diamond = false;
-  
-  export default handler;
-  
+handler.help = ["mlogo", "makelogo"];
+handler.tags = ["mlogo", "makelogo"];
+handler.command = /^(mlogo|makelogo)$/i;
+// handler.diamond = false;
 
-  
+export default handler;
+
+/* 
+
+https://textpro.me/create-light-glow-sliced-text-effect-online-1068.html
+sliced
+
+https://textpro.me/make-a-batman-logo-online-free-1066.html
+batman
+
+https://textpro.me/create-thunder-text-effect-online-881.html
+thunder
+
+https://textpro.me/create-a-magma-hot-text-effect-online-1030.html
+magma
+
+https://textpro.me/create-impressive-glitch-text-effects-online-1027.html
+glitch
+
+https://textpro.me/create-green-horror-style-text-effect-online-1036.html
+demon
+
+https://textpro.me/create-realistic-3d-text-effect-frozen-winter-1099.html
+frozen
+
+https://textpro.me/ice-cold-text-effect-862.html
+ice
+
+https://textpro.me/create-artistic-typography-online-1086.html
+typography
+
+https://textpro.me/write-text-on-foggy-window-online-free-1015.html
+foggy
+
+https://textpro.me/3d-stone-cracked-cool-text-effect-1029.html
+stone
+
+https://textpro.me/online-black-and-white-bear-mascot-logo-creation-1012.html
+bear
+
+https://textpro.me/double-exposure-text-effect-black-white-976.html
+forest
+
+https://textpro.me/create-burger-3d-text-effect-1111.html
+burger
+
+https://textpro.me/create-3d-dragon-scale-text-effect-online-1127.html
+dragon
+
+https://textpro.me/create-pokemon-logo-style-text-effect-online-1134.html
+pokemon
+
+https://textpro.me/natural-leaves-text-effect-931.html
+natural
+
+https://textpro.me/create-a-gradient-text-shadow-effect-online-1141.html
+shadow
+
+*/
