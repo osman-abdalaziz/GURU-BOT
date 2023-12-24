@@ -4,8 +4,40 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
     //     "Hello, this is an experimental script that will be developed by Dr.Osman later !"
     // );
 
+    if (text.toLowerCase() == "list") {
+        m.reply(`
+*Logo Type List*:
+
+» sliced
+» batman
+» thunder
+» magma
+» glitch
+» demon
+» frozen
+» ice
+» typography
+» foggy
+» stone
+» bear
+» forest
+» burger
+» dragon
+» pokemon
+» natural
+» shadow`);
+        m.react("📃");
+    } else if (!text) {
+        m.reply(
+            `🌟 This explains how to use the command \n\n ${usedPrefix}makelogo (type) (Your_Text) \n\n Example: ${usedPrefix}makelogo batman Osman_Abdalaziz \n\n ❗*Use "_" to separate words*`
+        );
+        m.react("❗");
+    }
+
     let logoText = args[1].replace("_", " ");
-    let type = args[0];
+    if (args) {
+        let type = args[0].toLowerCase();
+    }
     let types = [
         "sliced",
         "batman",
