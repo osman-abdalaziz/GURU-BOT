@@ -1,19 +1,19 @@
 const make = require("mumaker");
 
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
-    m.react("🕛");
+    // m.react("🕛");
 
-    // let type = args[0].toLowerCase();
-    let logoText = args[1];
-    if (!text) {
-        conn.reply(
-            `🌟 This is an explanation of how to use \n ${usedPrefix}(mlogo or makelogo) (Type) (Your Text) \n\n Example: \n ${usedPrefix}mlogo thunder Dr.Osman \n\n To get a list of logo types use ${usedPrefix}(mlogo or makelogo) list`
-        );
-        m.react("❎");
-    }
+    // // let type = args[0].toLowerCase();
+    // let logoText = args[1];
+    // if (!text) {
+    //     conn.reply(
+    //         `🌟 This is an explanation of how to use \n ${usedPrefix}(mlogo or makelogo) (Type) (Your Text) \n\n Example: \n ${usedPrefix}mlogo thunder Dr.Osman \n\n To get a list of logo types use ${usedPrefix}(mlogo or makelogo) list`
+    //     );
+    //     m.react("❎");
+    // }
     make.textpro(
         "https://textpro.me/create-light-glow-sliced-text-effect-online-1068.html",
-        [`${logoText}`]
+        ["osman"]
     )
         .then((data) =>
             conn.sendMessage(
@@ -33,9 +33,9 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
     // }
 };
 
-handler.help = ["mlogo", "makelogo"];
-handler.tags = ["mlogo", "makelogo"];
-handler.command = /^(mlogo|makelogo)$/i;
+handler.help = ["mlogo"];
+handler.tags = ["mlogo"];
+handler.command = /^(mlogo)$/i;
 // handler.diamond = false;
 
 export default handler;
