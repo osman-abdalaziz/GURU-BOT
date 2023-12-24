@@ -3,9 +3,9 @@ import { join } from "path";
 import axios from "axios";
 
 let handler = async (m, { conn, text, args, usedPrefix, command }) => {
-    m.reply(
-        `Hello, this is an experimental script that will be developed by ${args[1]} later !`
-    );
+    // m.reply(
+    //     `Hello, this is an experimental script that will be developed by ${args[1]} later !`
+    // );
 //     let who;
 //     if (m.isGroup)
 //         who = m.mentionedJid[0]
