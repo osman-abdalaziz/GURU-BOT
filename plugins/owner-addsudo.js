@@ -1,5 +1,6 @@
 let handler = async (m, { conn, text }) => {
     let who;
+    m.react("🕛");
     if (m.isGroup) {
         who = m.mentionedJid[0]
             ? m.mentionedJid[0]
@@ -17,17 +18,20 @@ let handler = async (m, { conn, text }) => {
     const caption = `🔓 SUDO | @${
         who.split("@")[0]
     } \n Now has been made an Sudo user! 🥳`;
-    await conn.sendMessage(
-        m.chat,
-        { Image: "./Assets/congrads.gif", caption: caption },
-        m,
-        { mentions: conn.parseMention(caption) }
-    );
+    conn.sendMessage(m.chat, {
+                        image: { url: "./Assets/congrads.gif" },
+                        caption: caption,
+                    }, m, {
+        mentions: conn.parseMention(caption),
+    })
+    // await conn.reply(m.chat, caption, m, {
+    //     mentions: conn.parseMention(caption),
+    // });
+    m.react("✅");
 };
-handler.help = ["addsudo @user"];
+handler.help = ["addsudo", "givesudo"];
 handler.tags = ["owner"];
 handler.command = /^(add|give|-)(sudo)$/i;
-handler.rowner = true;
-handler.admin = true;
+handler.owner = true;
 
 export default handler;
