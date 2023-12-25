@@ -1,7 +1,7 @@
 import { Sticker } from "wa-sticker-formatter";
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
     // m.relpy("This Command Is Disabled By Dr.Osman");
-
+    let stiker;
     let result = Math.floor(Math.random() * 6) + 1;
     let pp;
     switch (result) {
