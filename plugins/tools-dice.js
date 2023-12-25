@@ -1,3 +1,4 @@
+import { Sticker } from "wa-sticker-formatter";
 let handler = async (m, { conn, args, text, usedPrefix, command }) => {
     // m.relpy("This Command Is Disabled By Dr.Osman");
 
@@ -23,7 +24,18 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
             pp = "./Assets/dice/die_6.png";
             break;
     }
-    conn.sendFile(m.chat, pp);
+    // conn.sendFile(m.chat, pp);
+    async function createSticker(img, url, packName, authorName, quality) {
+        let stickerMetadata = {
+            type: "full",
+            pack: packName,
+            author: authorName,
+            quality,
+        };
+        return new Sticker(img ? img : url, stickerMetadata).toBuffer();
+    }
+    stiker = await createSticker(false, pp, "Dice", "Dr.Osman", 20);
+    m.reply(stiker);
     m.react("🎲");
 };
 
