@@ -1,5 +1,6 @@
 import { Sticker } from "wa-sticker-formatter";
 let handler = async (m, { conn, text }) => {
+    let stiker;
     let who;
     m.react("🕛");
     if (m.isGroup) {
