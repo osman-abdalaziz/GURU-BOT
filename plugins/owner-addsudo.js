@@ -19,8 +19,9 @@ let handler = async (m, { conn, text }) => {
         who.split("@")[0]
     } \n Now has been made an Sudo user! 🥳`;
     conn.sendMessage(m.chat, {
-                        image: { url: "./Assets/congrads.gif" },
+                        video: { url: "./Assets/congrads.gif" },
                         caption: caption,
+                        gifPlayback: true
                     }, m, {
         mentions: conn.parseMention(caption),
     })
