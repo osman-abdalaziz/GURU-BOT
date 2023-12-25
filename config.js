@@ -10,7 +10,10 @@ global.owner = [
   ['966530740094', 'Dr.Osman', true],
   ['201124226580', 'Dr.Eyad', true], 
   ['201050922095', 'Dr.Lina', true],
-  ['201111154733', 'Dr.Mohammed', true]
+  ['201111154733', 'Dr.Mohammed', true],
+  ['966590465317', "Dr.Hyder", true],
+  ['249963415442', 'Dr.Harith', true],
+  ['201552923172', 'Dr.No One', true]
 ] //Number of owners
 
 //global.pairingNumber = "" //put your bot number here
