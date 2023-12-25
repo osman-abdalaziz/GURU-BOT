@@ -15,8 +15,8 @@ let handler = async (m, { conn, text }) => {
         .catch((_) => "https://telegra.ph/file/24fa902ead26340f3df2c.png");
     const displayName = conn.getName(m.sender);
     const username = m.sender.split("@")[0];
-    const replies = `${randomInteger(400, 250)}`; // Replace with the desired value
-    const retweets = `${randomInteger(300, 450)}`; // Replace with the desired value
+    const replies = `${getRandomInt(400, 250)}`; // Replace with the desired value
+    const retweets = `${getRandomInt(300, 450)}`; // Replace with the desired value
     const theme = "dark"; // Replace with the desired value
 
     const url = `https://some-random-api.com/canvas/misc/tweet?displayname=${encodeURIComponent(
