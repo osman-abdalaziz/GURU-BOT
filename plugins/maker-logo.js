@@ -30,9 +30,9 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
     }
     if (!text) {
         m.reply(
-            `🌟 This explains how to use the command \n\n ${usedPrefix}makelogo (type) (Your_Text) \n\n Example: ${usedPrefix}makelogo batman Osman_Abdalaziz \n\n ❗*Use "_" to separate words*`
+            `📜 To use this command: \n\n ${usedPrefix}makelogo type Your_Text \n\n *Example:* ${usedPrefix}makelogo batman One_Two \n\n *Note:* Use "_" to separate words`
         );
-        m.react("❗");
+        m.react("❎");
     }
     let types = [
         "sliced",
