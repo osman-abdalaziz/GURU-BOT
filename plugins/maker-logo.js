@@ -145,21 +145,21 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
                 )
                 .catch((err) => m.reply(err));
             m.react("✅");
+        } else if (type == "flowers") {
+            let res = await mumaker
+                .photooxy(
+                    "https://photooxy.com/logo-and-text-effects/make-nature-3d-text-effects-364.html",
+                    [`${logoText}`]
+                )
+                .then((data) =>
+                    conn.sendMessage(m.chat, {
+                        image: { url: `${data.image}` },
+                        caption: "✅ Done this is your logo",
+                    })
+                )
+                .catch((err) => m.reply(err));
+            m.react("✅");
         }
-    } else if (type == "flowers") {
-        let res = await mumaker
-            .photooxy(
-                "https://photooxy.com/logo-and-text-effects/make-nature-3d-text-effects-364.html",
-                [`${logoText}`]
-            )
-            .then((data) =>
-                conn.sendMessage(m.chat, {
-                    image: { url: `${data.image}` },
-                    caption: "✅ Done this is your logo",
-                })
-            )
-            .catch((err) => m.reply(err));
-        m.react("✅");
     }
 };
 
