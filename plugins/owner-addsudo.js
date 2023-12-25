@@ -1,3 +1,4 @@
+import { Sticker } from "wa-sticker-formatter";
 let handler = async (m, { conn, text }) => {
     let who;
     m.react("🕛");
@@ -15,11 +16,21 @@ let handler = async (m, { conn, text }) => {
     if (global.owner.includes(who.split("@")[0]))
         throw "This person is already an SUDO!";
     global.owner.push([who.split("@")[0], name, true]);
-    conn.sendMessage(m.chat, { image: {url :'./Assets/congrads.gif'}, caption: '*Congratulations* 🥳'});
+    async function createSticker(img, url, packName, authorName, quality) {
+        let stickerMetadata = {
+            type: "full",
+            pack: packName,
+            author: authorName,
+            quality,
+        };
+        return new Sticker(img ? img : url, stickerMetadata).toBuffer();
+    }
+    stiker = await createSticker(false, "./Assets/congrads.gif", "Congratulations", "Dr.Osman", 20);
     const caption = `🔓 SUDO Unlocked | @${who.split("@")[0]} \n✅ Now has been made an *SUDO user*! 🥳`;
     await conn.reply(m.chat, caption, m, {
         mentions: conn.parseMention(caption),
     });
+    m.reply(stiker);
     m.react("✅");
 };
 handler.help = ["addsudo", "givesudo"];
