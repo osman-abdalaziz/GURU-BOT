@@ -15,7 +15,7 @@ let handler = async (m, { conn, text }) => {
     if (global.owner.includes(who.split("@")[0]))
         throw "This person is already an Sudo!";
     global.owner.push([who.split("@")[0], name, true]);
-    const caption = `🔓 SUDO | @${
+    const caption = `✅ SUDO | @${
         who.split("@")[0]
     } \n Now has been made an Sudo user! 🥳`;
     conn.sendMessage(m.chat, {
