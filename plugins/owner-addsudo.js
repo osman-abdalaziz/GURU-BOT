@@ -1,6 +1,5 @@
 let handler = async (m, { conn, text }) => {
     let who;
-    if (!who) throw "Tag the person you want to make an Premium!";
     if (m.isGroup) {
         who = m.mentionedJid[0]
             ? m.mentionedJid[0]
@@ -10,6 +9,7 @@ let handler = async (m, { conn, text }) => {
     } else {
         who = m.chat;
     }
+    if (!who) throw "Tag the person you want to make an Premium!";
     let name = await conn.getName(m.quoted.sender);
     let user = global.db.data.users[who];
     if (global.owner.includes(who.split("@")[0]))
