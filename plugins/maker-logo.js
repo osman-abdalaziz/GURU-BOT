@@ -34,6 +34,7 @@ let handler = async (m, { conn, text, args, usedPrefix, command }) => {
         "3d_castle",
         "naruto",
         "quotes_natural",
+        "birth_day"
     ];
     let newArray = types.map((element) => `» ${element}`);
     let message = `${newArray.join("\n")}`;
@@ -166,6 +167,11 @@ ${message}`);
                     library = "ephoto";
                     libLink =
                         "https://en.ephoto360.com/naruto-shippuden-logo-style-text-effect-online-808.html";
+                    break;
+                case "birth_day":
+                    library = "ephoto";
+                    libLink =
+                        "https://en.ephoto360.com/write-name-on-red-rose-birthday-cake-images-462.html";
                     break;
                 case "quotes_natural":
                     library = "ephoto_quota";
