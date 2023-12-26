@@ -48,7 +48,6 @@ ${message}`);
         let type = args[0].toLowerCase();
         let logoText = args[1].replace("_", " ");
         let isTwoText = false;
-        let twoText = args[2].replace("_", " ") || "";
 
         m.react("🕛");
         if (types.includes(type)) {
@@ -237,6 +236,7 @@ ${message}`);
                             .catch((err) => m.reply(err));
                         m.react("✅");
                     } else {
+                        let twoText = args[2].replace("_", " ") || "";
                         await mumaker
                             .textpro(libLink, [`${logoText}`, `${twoText}`])
                             .then((data) =>
@@ -262,6 +262,7 @@ ${message}`);
                             .catch((err) => m.reply(err));
                         m.react("✅");
                     } else {
+                        let twoText = args[2].replace("_", " ") || "";
                         await mumaker
                             .photooxy(libLink, [`${logoText}`, `${twoText}`])
                             .then((data) =>
@@ -287,6 +288,7 @@ ${message}`);
                             .catch((err) => m.reply(err));
                         m.react("✅");
                     } else {
+                        let twoText = args[2].replace("_", " ") || "";
                         await mumaker
                             .ephoto(libLink, [`${logoText}`, `${twoText}`])
                             .then((data) =>
