@@ -16,7 +16,7 @@ let pickupLineHandler = async (m, { conn, text, args }) => {
     let lang= "ar";
     try {
        let result = await translate(json.pickupline, { to: lang, autoCorrect: true }).catch(_ => null) 
-    let pickupLine = `اتفضل 😉: \n\n"${result}"`;
+    let pickupLine = `اتفضل 😉: \n\n"${result.text}"`;
         m.reply(pickupLine);
     } catch (e) {
         throw err
