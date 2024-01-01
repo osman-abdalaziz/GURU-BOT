@@ -34,7 +34,7 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
         };
         return new Sticker(img ? img : url, stickerMetadata).toBuffer();
     }
-    stiker = await createSticker(false, pp, "Dice", "Dr.Osman", 60);
+    stiker = await createSticker(false, pp, "Dice", "Dr.Osman", 128);
     m.reply(stiker);
     m.react("🎲");
 };
