@@ -6,22 +6,22 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
     let pp;
     switch (result) {
         case 1:
-            pp = "./Assets/dice/die_1.png";
+            pp = "./Assets/dice/die_1.gif";
             break;
         case 2:
-            pp = "./Assets/dice/die_2.png";
+            pp = "./Assets/dice/die_2.gif";
             break;
         case 3:
-            pp = "./Assets/dice/die_3.png";
+            pp = "./Assets/dice/die_3.gif";
             break;
         case 4:
-            pp = "./Assets/dice/die_4.png";
+            pp = "./Assets/dice/die_4.gif";
             break;
         case 5:
-            pp = "./Assets/dice/die_5.png";
+            pp = "./Assets/dice/die_5.gif";
             break;
         case 6:
-            pp = "./Assets/dice/die_6.png";
+            pp = "./Assets/dice/die_6.gif";
             break;
     }
     // conn.sendFile(m.chat, pp);
@@ -34,7 +34,7 @@ let handler = async (m, { conn, args, text, usedPrefix, command }) => {
         };
         return new Sticker(img ? img : url, stickerMetadata).toBuffer();
     }
-    stiker = await createSticker(false, pp, "Dice", "Dr.Osman", 20);
+    stiker = await createSticker(false, pp, "Dice", "Dr.Osman", 60);
     m.reply(stiker);
     m.react("🎲");
 };
